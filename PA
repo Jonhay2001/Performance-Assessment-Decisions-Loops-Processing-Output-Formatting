@@ -1,0 +1,61 @@
+# -------------------------------------------------------------
+# Name: Jonathan Haynes
+# Date: 11/20/2025
+# Description:
+#   This program greets the user, asks them to guess a number,
+#   tells them whether their guess is too high, too low, or correct,
+#   displays how many attempts it took, and demonstrates a while
+#   loop and a for loop that increment the correct guess.
+# -------------------------------------------------------------
+
+# Ask for name and student ID
+userName = input("Enter your name: ")
+studentId = input("Enter your Student ID: ")
+
+# Greet the user
+print("\nHello,", userName + "!")
+print("Student ID:", studentId)
+print("----------------------------------")
+
+# Predetermined number
+correctNumber = 5
+
+# Initialize counter
+attemptCount = 0
+
+# Guessing loop
+while True:
+    userGuess = int(input("Enter a number between 1 and 10: "))
+    attemptCount += 1
+
+    if userGuess > correctNumber:
+        print("Your guess is too HIGH.")
+    elif userGuess < correctNumber:
+        print("Your guess is too LOW.")
+    else:
+        print("You guessed the CORRECT number!")
+        print("It took you", attemptCount, "tries.")
+        break  # exit loop when correct
+
+print("\n----------------------------------")
+print("Now we will increment your correct guess value.\n")
+
+# ----- WHILE LOOP -----
+print("While Loop Output:")
+x = correctNumber
+counter = 0
+
+while counter < 5:
+    x += 1
+    print("x incremented by 1 is", x)
+    counter += 1
+
+print("\n----------------------------------")
+
+# ----- FOR LOOP -----
+print("For Loop Output:")
+x = correctNumber
+
+for i in range(5):
+    x += 1
+    print("x incremented by 1 is", x)
